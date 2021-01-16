@@ -12,6 +12,7 @@
     crossorigin="anonymous"
   />
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 
     <title>Weather Dashboard</title>
   </head>
@@ -22,52 +23,90 @@
   <body>
 
     <div class="container">
-        <div class="row mt-4">
-            <aside class="col-md-4">
-                <div class="container ">
-                    <h3>Search by City</h3>
-                    <div class="input-group ">
-                        <div class="form-outline">
-                            <input type="text" id="form1" class="form-control" />
-                        </div>
-                        <button onclick=saveSearch() id="saveBtn" type="button" class="btn btn-primary">
-                          <i class="fas fa-search"></i>
-                        </button>
-                    </div>
+      <div class="row mt-4">
 
-                    <div>
-                        <ul class="list-group"></ul>
-                    </br>
-                    </div>
-        
+        <aside class="col-xs-4">
+          <div class="container">
+            <h3>Search by City</h3>
+              <div class="input-group">
+                <div class="form-outline">
+                  <input type="text" id="form1" class="form-control" />
                 </div>
-            </aside>
+                <button onclick=saveSearch() id="saveBtn" type="button" class="btn btn-primary">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+
+              <div>
+                <ul class="list-group"></ul>
+              </div>
+
+          </div>
+        </aside>
        
-          <main class="col-md-8">
-            <div class="container">
-                <div class="current-weather card-body">
-                    <h3 class="currentName"></h3>
-                    <p class="currentDate"></p>
-                    <p class="currentIcon"></p>
-                    <p class="currentTemp"></p>
-                    <p class="currentHumid"></p>
-                    <p class="currentWind"></p>
-                    <p class="currentUv"></p>
+        <main class="col-sm-9">
+          <div class="container">
+           
+            <div class="current-weather text-center card card-body">
+              <h4 class="currentName"></h4>
+                <p class="currentDate"></p>
+                <p class="currentIcon"></p>
+                <p class="currentTemp"></p>
+                <p class="currentHumid"></p>
+                <p class="currentWind"></p>
+                <p class="currentUv"></p>
+            </div>
+            
+            <div class="forecast-container">
+              <div class="row">
+                <div class="dayOne col-sm">
+                  <h4 class="oneDate"></h4>
+                  <p class="oneIcon"></p>
+                  <p class="oneTemp"></p>
+                  <p class="oneHumid"></p>
+                </div>
+      
+                <div class="dayTwo col-sm">
+                  <h4 class="twoDate"></h4>
+                  <p class="twoIcon"></p>
+                  <p class="twoTemp"></p>
+                  <p class="twoHumid"></p>
+                </div>
+                
+                <div class="dayThree col-sm">
+                  <h4 class="threeDate"></h4>
+                  <p class="threeIcon"></p>
+                  <p class="threeTemp"></p>
+                  <p class="threeHumid"></p>
                 </div>
 
-                <div class="forecast-container card">
-                    
+                <div class="dayFour col-sm">
+                  <h4 class="fourDate"></h4>
+                  <p class="fourIcon"></p>
+                  <p class="fourTemp"></p>
+                  <p class="fourHumid"></p>
                 </div>
+              
+                <div class="dayFive col-sm">
+                  <h4 class="fiveDate"></h4>
+                  <p class="fiveIcon"></p>
+                  <p class="fiveTemp"></p>
+                  <p class="fiveHumid"></p>
+                </div>
+
             </div>
-          </main>
-          
+                
+          </div>
         </div>
+        </main>
+
+      </div>
     </div>
  
 
 
 
-
+    
     <script src="./assets/js/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
