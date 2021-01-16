@@ -2,3 +2,15 @@
     font-size: 3rem;
     font-weight: bold;
 }
+
+ul {
+    list-style: none;
+}
+
+.col-md-4 {
+    background-color: #66C0DA ;
+}
+
+.col-md-8 {
+background-color: #B2C7CF;
+}
