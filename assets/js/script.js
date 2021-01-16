@@ -10,7 +10,7 @@ function saveSearch() {
     fetch(
         'https://api.openweathermap.org/data/2.5/weather?q=' +
         searchTerm + 
-        '&appid=694839b31c7ac35b93cf916a4c954d0c' + '&units=imperial'
+        '&appid=caf659c6240a1e09c74a3451293f7338' + '&units=imperial'
         )
       .then(function(response) {
         
@@ -48,9 +48,9 @@ function saveSearch() {
 
         // get current weather UV 
         fetch(
-        'http://api.openweathermap.org/data/2.5/uvi?lat='
+        'https://api.openweathermap.org/data/2.5/uvi?lat='
         + coordLat 
-        + '&lon=' + coordLon + '&appid=694839b31c7ac35b93cf916a4c954d0c'
+        + '&lon=' + coordLon + '&appid=caf659c6240a1e09c74a3451293f7338'
         )
 
         .then(function(response) {
@@ -66,9 +66,9 @@ function saveSearch() {
         var searchTerm = $(".form-control").val().replace(" ", "%20");
 
         fetch(
-        'http://api.openweathermap.org/data/2.5/forecast?q='
+        'https://api.openweathermap.org/data/2.5/forecast?q='
         + searchTerm +
-        '&appid=694839b31c7ac35b93cf916a4c954d0c'  + '&units=imperial'
+        '&appid=caf659c6240a1e09c74a3451293f7338'  + '&units=imperial'
         )
 
         .then(function(response) {
