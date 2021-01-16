@@ -80,7 +80,7 @@ function saveSearch() {
             var oneDate = moment(response.list[2].dt_txt).format('L');
             $(".oneDate").html(oneDate)
             $(".oneIcon").html("<img src='https://openweathermap.org/img/w/" + response.list[2].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
-            $(".oneTemp").html("Temperature: " + response.list[2].main.temp + " F");
+            $(".oneTemp").html("Temp: " + response.list[2].main.temp + " F");
             $(".oneHumid").html("Humidity: " + response.list[2].main.humidity + "%");
 
             // 2 days after current
@@ -88,7 +88,7 @@ function saveSearch() {
             $(".twoDate").html(twoDate)
             
             $(".twoIcon").html("<img src='https://openweathermap.org/img/w/" + response.list[11].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
-            $(".twoTemp").html("Temperature: " + response.list[1].main.temp + " F");
+            $(".twoTemp").html("Temp: " + response.list[1].main.temp + " F");
             $(".twoHumid").html("Humidity: " + response.list[11].main.humidity + "%");
 
             // 3 days after current
@@ -96,7 +96,7 @@ function saveSearch() {
             $(".threeDate").html(threeDate)
             
             $(".threeIcon").html("<img src='https://openweathermap.org/img/w/" + response.list[19].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
-            $(".threeTemp").html("Temperature: " + response.list[19].main.temp + " F");
+            $(".threeTemp").html("Temp: " + response.list[19].main.temp + " F");
             $(".threeHumid").html("Humidity: " + response.list[19].main.humidity + "%");
 
             // 4 days after current
@@ -104,7 +104,7 @@ function saveSearch() {
             $(".fourDate").html(fourDate)
             
             $(".fourIcon").html("<img src='https://openweathermap.org/img/w/" + response.list[27].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
-            $(".fourTemp").html("Temperature: " + response.list[27].main.temp + " F");
+            $(".fourTemp").html("Temp: " + response.list[27].main.temp + " F");
             $(".fourHumid").html("Humidity: " + response.list[27].main.humidity + "%");
 
             // 5 days after current
@@ -112,7 +112,7 @@ function saveSearch() {
             $(".fiveDate").html(fiveDate)
             
             $(".fiveIcon").html("<img src='https://openweathermap.org/img/w/" + response.list[35].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
-            $(".fiveTemp").html("Temperature: " + response.list[35].main.temp + " F");
+            $(".fiveTemp").html("Temp: " + response.list[35].main.temp + " F");
             $(".fiveHumid").html("Humidity: " + response.list[35].main.humidity + "%");
         })
 })
