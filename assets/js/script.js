@@ -9,8 +9,8 @@ function saveSearch() {
     // get current weather information 
     fetch(
         'https://api.openweathermap.org/data/2.5/weather?q=' +
-        searchTerm+ 
-        '&appid=56105cac53a463052745b0b32542cbe0' + "&units=imperial"
+        searchTerm + 
+        '&appid=694839b31c7ac35b93cf916a4c954d0c' + '&units=imperial'
         )
       .then(function(response) {
         
@@ -19,12 +19,13 @@ function saveSearch() {
       .then(function(response) {
         
         // create list of search history
-        var searchHistory = $("<li>")
+        var searchHistory = $("<a>")
        
-        .addClass("list-group-item")
-        .text(response.name);
+        .addClass("list-group-item list-group-item-action")
+        .text(response.name)
 
         $(".list-group").append(searchHistory);
+        
         
         // add to local storage
         localStorage.setItem(storageIndex, response.name);
@@ -49,7 +50,7 @@ function saveSearch() {
         fetch(
         'http://api.openweathermap.org/data/2.5/uvi?lat='
         + coordLat 
-        + '&lon=' + coordLon + '&appid=56105cac53a463052745b0b32542cbe0'
+        + '&lon=' + coordLon + '&appid=694839b31c7ac35b93cf916a4c954d0c'
         )
 
         .then(function(response) {
@@ -67,14 +68,14 @@ function saveSearch() {
         fetch(
         'http://api.openweathermap.org/data/2.5/forecast?q='
         + searchTerm +
-        '&appid=56105cac53a463052745b0b32542cbe0' + "&units=imperial"
+        '&appid=694839b31c7ac35b93cf916a4c954d0c'  + '&units=imperial'
         )
 
         .then(function(response) {
         return response.json();
         })
         
-        // display UV index information 
+        // get 5 day forecast
         .then(function(response) {
             // 1 day after current
             var oneDate = moment(response.list[2].dt_txt).format('L');
