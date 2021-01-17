@@ -9,10 +9,10 @@ CSS
 JAVASCRIPT
 
 ## Website 
-https://ohwhytina.github.io/weather-dashboard/
+https://ohwhytina.github.io/Weather-Dashboard/
 
 ## Repository
-https://github.com/ohwhytina/weather-dashboard
+https://github.com/ohwhytina/Weather-Dashboard
 
 ## Video 
-![Weather-Dashboard ] ()
+![Weather-Dashboard ] (https://raw.githubusercontent.com/ohwhytina/Weather-Dashboard/main/assets/img/Weather%20Dashboard.gif)
