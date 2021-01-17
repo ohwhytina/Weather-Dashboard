@@ -72,16 +72,26 @@ function saveSearch() {
 
             if (response.value >= 0.00 && response.value <= 2.99) {
                 $(".currentUv").addClass("favorable");
-            } else if (response.value >= 3.00 && response.value <= 5.99) {
+                $(".currentUv").removeClass("moderate");
+                $(".currentUv").removeClass("high");
+                $(".currentUv").removeClass("extreme");
+            } else if (response.value >= 3.00 && response.value >= 3.00 && response.value <= 5.99) {
                 $(".currentUv").addClass("moderate");
-            } else if (response.value >= 6.00 && response.value <=7.99) {
+                $(".currentUv").removeClass("favorable");
+                $(".currentUv").removeClass("high");
+                $(".currentUv").removeClass("extreme");
+            } else if (response.value >= 6.00 && response.value >= 6.00 && response.value <=7.99) {
                 $(".currentUv").addClass("high");
+                $(".currentUv").removeClass("favorable");
+                $(".currentUv").removeClass("moderate");
+                $(".currentUv").removeClass("extreme");
             } else {
                 $(".currentUv").addClass("extreme");
+                $(".currentUv").removeClass("favorable");
+                $(".currentUv").removeClass("moderate");
+                $(".currentUv").removeClass("high");
             }
-        
-        
-        
+            
 
         // get current weather 
         var searchTerm = $(".form-control").val().replace(" ", "%20");
