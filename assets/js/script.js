@@ -14,22 +14,26 @@ function saveSearch() {
         '&appid=caf659c6240a1e09c74a3451293f7338' + '&units=imperial'
         )
       .then(function(response) {
-            
+        if (response.status === 404) {
+            alert("Invalid Entry.")
+        } else {
+        return response.json();
+        
+        }
+        }) 
+    
 
-      return response.json();
-      
-        })
       .then(function(response) {
         
         // create list of search history
         var searchHistory = $("<a>")
-       
-        .addClass("list-group-item list-group-item-action")
+        .addClass("list-group-item")
         .text(response.name)
 
-        $(".list-group").append(searchHistory);
+        $(".list-group").append(searchHistory)
+        $('#form1').on("focus").val()
         
-        
+
         // add to local storage
         localStorage.setItem(storageIndex, response.name);
         storageIndex = storageIndex + 1
@@ -133,4 +137,5 @@ function saveSearch() {
         })
     })
 })
+
 }
