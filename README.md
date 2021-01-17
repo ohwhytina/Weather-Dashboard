@@ -15,4 +15,4 @@ https://ohwhytina.github.io/Weather-Dashboard/
 https://github.com/ohwhytina/Weather-Dashboard
 
 ## Video 
-![Weather-Dashboard Demo] (https://raw.githubusercontent.com/ohwhytina/Weather-Dashboard/main/assets/img/Weather%20Dashboard.gif)
+![Weather-Dashboard Demo](https://raw.githubusercontent.com/ohwhytina/Weather-Dashboard/main/assets/img/Weather%20Dashboard.gif)
