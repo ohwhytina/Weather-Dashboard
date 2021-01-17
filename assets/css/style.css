@@ -12,15 +12,15 @@ ul {
 }
 
 .favorable {
-    background-color: green
+    background-color: #8FBC8F
 }
 
 .moderate {
-    background-color: yellow;
+    background-color: #FF7F50;
 }
 
 .high {
-    background-color: orange;
+    background-color:#FF4500;
 }
 
 .extreme {

@@ -3,8 +3,9 @@ var storageIndex = 0;
 
 // when click on search button
 function saveSearch() {
- 
+    
     var searchTerm = $(".form-control").val().replace(" ", "%20");
+   
 
     // get current weather information 
     fetch(
@@ -13,9 +14,11 @@ function saveSearch() {
         '&appid=caf659c6240a1e09c74a3451293f7338' + '&units=imperial'
         )
       .then(function(response) {
-        
+            
+
       return response.json();
-      })
+      
+        })
       .then(function(response) {
         
         // create list of search history
@@ -61,7 +64,7 @@ function saveSearch() {
         .then(function(response) {
             $(".currentUv").html("UV Index: " + response.value);
 
-            if (response.value >= 0 && response.value <= 2.99) {
+            if (response.value >= 0.00 && response.value <= 2.99) {
                 $(".currentUv").addClass("favorable");
             } else if (response.value >= 3.00 && response.value <= 5.99) {
                 $(".currentUv").addClass("moderate");
