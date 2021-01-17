@@ -31,6 +31,8 @@ function saveSearch() {
         .text(response.name)
 
         $(".list-group").append(searchHistory)
+
+        //clear input when click on
         $('#form1').on("focus").val()
         
 
