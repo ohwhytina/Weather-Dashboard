@@ -14,3 +14,15 @@ ul {
 .favorable {
     background-color: green
 }
+
+.moderate {
+    background-color: yellow;
+}
+
+.high {
+    background-color: orange;
+}
+
+.extreme {
+    background-color: red;
+}

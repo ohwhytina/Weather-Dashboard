@@ -60,9 +60,21 @@ function saveSearch() {
         // display UV index information 
         .then(function(response) {
             $(".currentUv").html("UV Index: " + response.value);
-        })
 
-        // get current weather UV 
+            if (response.value >= 0 && response.value <= 2.99) {
+                $(".currentUv").addClass("favorable");
+            } else if (response.value >= 3.00 && response.value <= 5.99) {
+                $(".currentUv").addClass("moderate");
+            } else if (response.value >= 6.00 && response.value <=7.99) {
+                $(".currentUv").addClass("high");
+            } else {
+                $(".currentUv").addClass("extreme");
+            }
+        
+        
+        
+
+        // get current weather 
         var searchTerm = $(".form-control").val().replace(" ", "%20");
 
         fetch(
@@ -116,7 +128,6 @@ function saveSearch() {
             $(".fiveTemp").html("Temp: " + response.list[35].main.temp + " F");
             $(".fiveHumid").html("Humidity: " + response.list[35].main.humidity + "%");
         })
+    })
 })
-};
-
-
+}
